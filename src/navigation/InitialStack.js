@@ -1,15 +1,13 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import SplashContainer from '../screens/splash/SplashContainer';
 import HomeContainer from '../screens/Home/HomeContainer';
-import {ThemeContext} from '../../App';
+import {colors} from '../theme/index';
 
 const Stack = createNativeStackNavigator();
 
 const InitialStack = () => {
-  const {colors} = useContext(ThemeContext); // consuming theme context
-
   return (
     <Stack.Navigator>
       <Stack.Screen

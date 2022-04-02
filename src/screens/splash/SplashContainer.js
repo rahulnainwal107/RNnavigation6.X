@@ -1,12 +1,10 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 
 import assetPath from '../../assets/index';
-import {ThemeContext} from '../../../App';
+import {strings} from '../../theme/index';
 
 const SplashContainer = ({navigation}) => {
-  const {strings} = useContext(ThemeContext); // consuming theme context
-
   useEffect(() => {
     setTimeout(() => {
       navigation.replace('Home'); // To avoid moving backe to splash screen once navigated to home screen.
