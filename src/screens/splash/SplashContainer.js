@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 
 import assetPath from '../../assets/index';
 
-const SplashContainer = () => {
+const SplashContainer = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Home'); // To avoid moving backe to splash screen once navigated to home screen.
+    }, 5000);
+  }, []);
+
   return (
     <View style={styles.mainContainer}>
       <Image source={assetPath.splashImage} style={styles.imageStyle} />
