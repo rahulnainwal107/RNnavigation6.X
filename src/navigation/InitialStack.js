@@ -2,7 +2,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import SplashContainer from '../screens/splash/SplashContainer';
-import HomeContainer from '../screens/Home/HomeContainer';
+import HomeStack from './HomeStack';
 import {colors} from '../theme/index';
 
 const Stack = createNativeStackNavigator();
@@ -16,9 +16,9 @@ const InitialStack = () => {
         options={{headerShown: false}} // To show hide header on top of screen
       />
       <Stack.Screen
-        name="Home"
-        component={HomeContainer}
-        options={{headerStyle: {backgroundColor: colors.headerBackgroundColor}}}
+        name="HomeStack"
+        component={HomeStack}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

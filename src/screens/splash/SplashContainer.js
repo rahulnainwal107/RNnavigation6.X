@@ -7,7 +7,7 @@ import {strings} from '../../theme/index';
 const SplashContainer = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Home'); // To avoid moving backe to splash screen once navigated to home screen.
+      navigation.replace('HomeStack'); // To avoid moving backe to splash screen once navigated to home screen.
     }, 5000);
   }, []);
 
