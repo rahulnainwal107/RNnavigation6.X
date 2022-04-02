@@ -15,7 +15,10 @@ const HomeContainer = ({navigation}) => {
         onPress={onPress.bind(this, 'StackScreens')}
       />
       <ButtonComponent title={'Drawer Navigator'} />
-      <ButtonComponent title={'Material Top Tabs'} />
+      <ButtonComponent
+        title={'Material Top Tabs'}
+        onPress={onPress.bind(this, 'TopTabBarStack')}
+      />
       <ButtonComponent title={'Bottom Tabs Navigator'} />
       <ButtonComponent title={'Material Bottom Tabs Navigator'} />
     </View>

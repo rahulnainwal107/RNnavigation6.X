@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeContainer from '../screens/Home/HomeContainer';
 import StackScreenNavigator from './StackScreenNavigator';
+import TopTabBarStack from './TopTabBarStack';
 import {colors} from '../theme/index';
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,11 @@ const StackNavigator = () => {
         name="StackScreens"
         component={StackScreenNavigator}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="TopTabBarStack"
+        getComponent={() => TopTabBarStack}
+        options={{headerShadowVisible: false}}
       />
     </Stack.Navigator>
   );
