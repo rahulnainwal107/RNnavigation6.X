@@ -18,7 +18,7 @@ const StackNavigator = () => {
       <Stack.Screen
         name="StackScreens"
         component={StackScreenNavigator}
-        options={{headerStyle: {backgroundColor: colors.headerBackgroundColor}}}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );
